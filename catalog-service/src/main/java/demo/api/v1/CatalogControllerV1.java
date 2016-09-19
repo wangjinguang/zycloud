@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+
+
 import java.util.Optional;
 
 @RestController
@@ -25,6 +27,9 @@ public class CatalogControllerV1 {
 
     @RequestMapping(path = "/catalog", method = RequestMethod.GET, name = "getCatalog")
     public ResponseEntity<Catalog> getCatalog() {
+    	
+    	System.out.println("liusy");
+    	
         return Optional.ofNullable(catalogService.getCatalog())
                 .map(result -> new ResponseEntity<>(result, HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
