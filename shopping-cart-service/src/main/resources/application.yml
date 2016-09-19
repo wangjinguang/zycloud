@@ -15,10 +15,10 @@ security:
 spring:
   profiles: development
   datasource:
-    url: jdbc:mysql://192.168.1.128:3306/dev5
+    url: jdbc:mysql://192.168.1.120:3306/cartdb
     username: root
-    password: dbpass
-    platform: mysql
+    password: 3g2win.com
+    initialize: true
 security:
   oauth2:
     resource:
