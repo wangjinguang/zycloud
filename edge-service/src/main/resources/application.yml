@@ -17,6 +17,20 @@ zuul:
     user-service: /user/**
     catalog-service: /catalog/**
     shopping-cart-service: /shoppingcart/**
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 6000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 61000
 security:
   oauth2:
     resource:

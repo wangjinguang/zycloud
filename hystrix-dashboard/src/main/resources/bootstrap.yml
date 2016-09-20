@@ -16,6 +16,14 @@ spring:
     config:
       uri: http://192.168.1.128:8888
 spring.profiles.active: development
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 61000
 ---
 spring:
   profiles: cloud
